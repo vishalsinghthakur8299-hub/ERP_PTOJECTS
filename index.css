@@ -1,0 +1,94 @@
+/* File: src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&family=Roboto&display=swap');
+
+:root {
+  --bg-color: #f8f9fa; /* Light background */
+  --text-color: #333; /* Dark text */
+  --heading-color: #007bff; /* Blue for trust */
+  --accent-green: #28a745; /* Green for growth */
+  --accent-yellow: #ffc107; /* Yellow for optimism */
+  --card-bg: #ffffff; /* White cards */
+  --nav-bg: #ffffff; /* White nav */
+  --footer-bg: #343a40; /* Dark footer */
+  --transparent-bg: rgba(255, 255, 255, 0.1); /* Light transparency */
+}
+
+body.dark {
+  --bg-color: #1a1a1a; /* Dark background */
+  --text-color: #e0e0e0; /* Light text */
+  --heading-color: #4dabf7; /* Lighter blue */
+  --accent-green: #51cf66; /* Brighter green */
+  --accent-yellow: #fcc419; /* Brighter yellow */
+  --card-bg: rgba(255, 255, 255, 0.05); /* Dark transparent cards */
+  --nav-bg: #1a1a1a; /* Dark nav */
+  --footer-bg: #0d0d0d; /* Darker footer */
+  --transparent-bg: rgba(0, 0, 0, 0.5); /* Dark transparency */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; /* Smooth theme switch, like dimming lights */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--heading-color);
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.glass-effect {
+  background: var(--transparent-bg);
+  backdrop-filter: blur(10px); /* Frosted glass, like a shower door */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0; /* No rounded borders for sharp look */
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500; /* Bolder text for professional feel */
+}
+
+.carousel-inner img {
+  height: 80vh; /* Not full screen for better mobile view */
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.card {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background-color 0.3s;
+  border-radius: 0; /* Sharp edges */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent-green);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h1 { font-size: 1.5rem; } /* Smaller text on phones, like app notifications */
+  .counter { font-size: 2rem; }
+  .navbar-nav { text-align: center; } /* Center menu on mobile */
+}
